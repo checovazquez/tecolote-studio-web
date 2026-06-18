@@ -3,505 +3,1078 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tecolote Studio — Construimos lo digital.</title>
-  <meta name="description" content="Apps, bots de inteligencia artificial y experiencias digitales hechas a la medida. Tecnología con propósito. Monterrey, MX.">
-  <meta property="og:title" content="Tecolote Studio">
-  <meta property="og:description" content="Construimos lo digital.">
+  <title>Tecolote Studio — Estudio digital mexicano</title>
+
+  <!-- ── SEO / META ── -->
+  <meta name="description" content="Tecolote Studio diseña y construye productos digitales con alma: apps, inteligencia artificial y experiencias hechas a la medida. Estrategia, diseño y código desde Monterrey, México.">
+  <meta name="theme-color" content="#133E47">
+  <meta name="author" content="Tecolote Studio">
+  <link rel="canonical" href="https://tecolote.mx/">
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="Tecolote Studio">
+  <meta property="og:url" content="https://tecolote.mx/">
+  <meta property="og:title" content="Tecolote Studio — Estudio digital mexicano">
+  <meta property="og:description" content="Diseñamos y construimos productos digitales con alma. Estrategia, diseño y código desde Monterrey, México.">
+  <meta property="og:image" content="https://tecolote.mx/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:secure_url" content="https://tecolote.mx/og-image.png">
+  <meta property="og:image:alt" content="Tecolote Studio — Construimos lo digital con alma.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tecolote Studio — Estudio digital mexicano">
+  <meta name="twitter:description" content="Diseñamos y construimos productos digitales con alma. Monterrey, México.">
+  <meta name="twitter:image" content="https://tecolote.mx/og-image.png">
+  <meta name="twitter:image:alt" content="Tecolote Studio — Construimos lo digital con alma.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="owl-teal.png">
+  <link rel="apple-touch-icon" href="owl-teal.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Tecolote Studio",
+    "description": "Estudio digital que diseña y construye apps, inteligencia artificial y experiencias a la medida.",
+    "url": "https://tecolote.mx",
+    "image": "https://tecolote.mx/og-image.png",
+    "areaServed": "MX",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Monterrey",
+      "addressRegion": "Nuevo León",
+      "addressCountry": "MX"
+    },
+    "knowsAbout": ["Desarrollo de software", "Inteligencia artificial", "Diseño de producto", "Aplicaciones web y móviles"],
+    "slogan": "Construimos lo digital con alma."
+  }
+  </script>
+
   <style>
+    /* ════════════════════════════════════════════════
+       DESIGN SYSTEM — Tecolote Studio
+       ════════════════════════════════════════════════ */
+    :root {
+      /* ── Brand color ── */
+      --teal:          #1C5A66;
+      --teal-deep:     #133E47;
+      --teal-ink:      #0E2E35;
+      --teal-soft:     #2E7E8C;
+      --terracotta:    #C25B28;
+      --terracotta-lo: #D5784A;
+      --clay:          #5E3A28;
+      --cactus:        #7FA552;
+      --stone:         #4A4A47;
+      --stone-lo:      #807D74;
+
+      /* ── Surfaces ── */
+      --cream:         #F4F1E8;
+      --cream-deep:    #ECE7D8;
+      --ivory:         #FBFAF5;
+      --ink:           #18242A;
+      --line:          #DED8C7;
+      --line-dark:     rgba(244,241,232,0.14);
+
+      /* ── Semantic tokens ── */
+      --color-primary:   var(--teal);
+      --color-secondary: var(--clay);
+      --color-accent:    var(--terracotta);
+      --color-surface:   var(--cream);
+      --color-text:      var(--stone);
+      --color-heading:   var(--teal-deep);
+
+      /* ── Typography ── */
+      --font-display: 'Alegreya', Georgia, 'Times New Roman', serif;
+      --font-sans:    'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+      --fs-hero:    clamp(2.9rem, 7.2vw, 5.6rem);
+      --fs-h1:      clamp(2.1rem, 4.8vw, 3.5rem);
+      --fs-h2:      clamp(1.6rem, 3.2vw, 2.4rem);
+      --fs-h3:      clamp(1.2rem, 1.6vw, 1.35rem);
+      --fs-body-lg: clamp(1.08rem, 1.4vw, 1.22rem);
+      --fs-body:    1rem;
+      --fs-caption: 0.8125rem;
+      --fs-eyebrow: 0.72rem;
+
+      /* ── Spacing scale ── */
+      --sp-1: 0.5rem;  --sp-2: 1rem;   --sp-3: 1.5rem;
+      --sp-4: 2rem;    --sp-5: 3rem;   --sp-6: 4.5rem;
+      --sp-7: 6.5rem;  --sp-8: 9rem;
+
+      /* ── Radii ── */
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 26px;
+      --radius-pill: 999px;
+
+      /* ── Shadows (warm-tinted) ── */
+      --shadow-soft: 0 1px 2px rgba(19,62,71,0.04), 0 8px 24px rgba(19,62,71,0.06);
+      --shadow-card: 0 2px 6px rgba(19,62,71,0.05), 0 18px 48px rgba(19,62,71,0.10);
+      --shadow-lift: 0 30px 70px rgba(14,46,53,0.18);
+
+      /* ── Motion ── */
+      --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --t-fast: 0.18s;
+      --t-base: 0.32s;
+      --t-slow: 0.6s;
+
+      /* ── Layout ── */
+      --container: 1180px;
+      --gutter: clamp(1.25rem, 5vw, 3rem);
+      --nav-h: 72px;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    :root {
-      --green-dark:   #1A3D0A;
-      --green-main:   #3B6D11;
-      --green-mid:    #4A8A18;
-      --green-light:  #97C459;
-      --green-pale:   #C0DD97;
-      --black:        #0D0D0D;
-      --black-2:      #1A1A1A;
-      --black-3:      #2A2A2A;
-      --gray-dark:    #444441;
-      --gray-mid:     #5F5E5A;
-      --gray-light:   #888780;
-      --gray-pale:    #D3D1C7;
-      --off-white:    #F5F5F0;
-    }
-
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-      background: var(--black);
-      color: var(--off-white);
+      font-family: var(--font-sans);
+      font-size: var(--fs-body);
+      line-height: 1.6;
+      color: var(--color-text);
+      background: var(--cream);
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    /* ── SCROLLBAR ── */
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--black); }
-    ::-webkit-scrollbar-thumb { background: var(--green-main); border-radius: 3px; }
+    ::selection { background: var(--terracotta); color: var(--ivory); }
 
-    /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      height: 64px;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 2.5rem;
-      background: rgba(13,13,13,0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 0.5px solid var(--green-dark);
-      transition: background 0.3s;
-    }
-    nav.scrolled { background: rgba(13,13,13,0.97); }
-    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .nav-logo-text { line-height: 1; }
-    .nav-logo-text span { font-family: Georgia, 'Times New Roman', serif; font-size: 18px; color: #fff; letter-spacing: 0.5px; display: block; }
-    .nav-logo-text small { font-size: 9px; color: var(--green-light); letter-spacing: 5px; display: block; margin-top: 2px; }
-    .nav-links { display: flex; gap: 28px; list-style: none; }
-    .nav-links a { font-size: 13px; color: var(--gray-light); text-decoration: none; letter-spacing: 0.03em; transition: color 0.2s; position: relative; padding-bottom: 2px; }
-    .nav-links a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1px; background: var(--green-light); transition: width 0.25s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--green-light); }
-    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
-    .nav-cta {
-      font-size: 12px; padding: 8px 18px; border-radius: 6px;
-      background: var(--green-main); color: var(--green-pale);
-      border: none; cursor: pointer; letter-spacing: 0.03em;
-      transition: background 0.2s, transform 0.15s;
-      text-decoration: none;
-    }
-    .nav-cta:hover { background: var(--green-mid); transform: translateY(-1px); }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
-    .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--gray-light); transition: all 0.3s; }
+    ::-webkit-scrollbar { width: 9px; }
+    ::-webkit-scrollbar-track { background: var(--cream-deep); }
+    ::-webkit-scrollbar-thumb { background: var(--teal-soft); border-radius: 99px; border: 2px solid var(--cream-deep); }
 
-    /* ── HERO ── */
-    #hero {
-      min-height: 100vh;
-      display: flex; flex-direction: column; justify-content: center;
-      padding: 8rem 2.5rem 5rem;
-      position: relative; overflow: hidden;
-      border-bottom: 0.5px solid var(--green-dark);
+    a { color: inherit; text-decoration: none; }
+    img, svg { display: block; max-width: 100%; }
+
+    /* ── Skip link (a11y) ── */
+    .skip-link {
+      position: absolute; left: 1rem; top: -100px; z-index: 200;
+      background: var(--teal-deep); color: var(--ivory);
+      padding: 0.7rem 1.1rem; border-radius: var(--radius-sm);
+      font-size: var(--fs-caption); transition: top var(--t-base) var(--ease);
     }
-    .hero-grid {
-      position: absolute; inset: 0; opacity: 0.04;
-      background-image: linear-gradient(var(--green-light) 1px, transparent 1px),
-                        linear-gradient(90deg, var(--green-light) 1px, transparent 1px);
-      background-size: 48px 48px;
-    }
-    .hero-glow {
-      position: absolute; top: -120px; right: -120px;
-      width: 500px; height: 500px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(59,109,17,0.18) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .hero-content { position: relative; z-index: 1; }
-    .hero-tag {
-      font-size: 11px; letter-spacing: 4px; color: var(--green-light);
-      text-transform: uppercase; margin-bottom: 1.75rem;
-      opacity: 0; transform: translateY(16px);
-      animation: fadeUp 0.7s 0.2s forwards;
-    }
-    .hero h1 {
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: clamp(40px, 6vw, 72px);
-      font-weight: 700; color: #fff;
-      line-height: 1.05; max-width: 680px;
-      margin-bottom: 1.5rem;
-      opacity: 0; transform: translateY(20px);
-      animation: fadeUp 0.7s 0.35s forwards;
-    }
-    .hero h1 em { color: var(--green-light); font-style: normal; }
-    .hero-sub {
-      font-size: 17px; color: var(--gray-light); line-height: 1.75;
-      max-width: 480px; margin-bottom: 2.75rem;
-      opacity: 0; transform: translateY(20px);
-      animation: fadeUp 0.7s 0.5s forwards;
-    }
-    .hero-cta {
-      display: flex; gap: 12px; flex-wrap: wrap;
-      opacity: 0; transform: translateY(20px);
-      animation: fadeUp 0.7s 0.65s forwards;
-    }
-    .btn-primary {
-      background: var(--green-main); color: var(--green-pale);
-      border: none; padding: 14px 30px;
-      font-size: 14px; font-weight: 500; border-radius: 8px; cursor: pointer;
-      letter-spacing: 0.03em; text-decoration: none; display: inline-block;
-      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-    }
-    .btn-primary:hover { background: var(--green-mid); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(59,109,17,0.35); }
-    .btn-secondary {
-      background: transparent; color: var(--gray-light);
-      border: 0.5px solid var(--gray-dark); padding: 14px 30px;
-      font-size: 14px; border-radius: 8px; cursor: pointer; text-decoration: none; display: inline-block;
-      transition: color 0.2s, border-color 0.2s, transform 0.15s;
-    }
-    .btn-secondary:hover { color: #fff; border-color: var(--gray-light); transform: translateY(-2px); }
-    .hero-scroll {
-      position: absolute; bottom: 2.5rem; left: 2.5rem;
-      display: flex; align-items: center; gap: 10px;
-      font-size: 11px; letter-spacing: 3px; color: var(--gray-dark);
+    .skip-link:focus { top: 1rem; }
+
+    :focus-visible { outline: 2.5px solid var(--terracotta); outline-offset: 3px; border-radius: 4px; }
+
+    /* ── Reusable layout ── */
+    .container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+    .section { padding-block: clamp(4rem, 9vw, var(--sp-8)); position: relative; }
+
+    /* ── Typography helpers ── */
+    .eyebrow {
+      font-family: var(--font-sans);
+      font-size: var(--fs-eyebrow);
+      font-weight: 600;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
-      opacity: 0; animation: fadeUp 0.7s 1s forwards;
+      display: inline-flex; align-items: center; gap: 0.7rem;
+      color: var(--terracotta);
     }
-    .scroll-line {
-      width: 32px; height: 1px; background: var(--gray-dark);
-      animation: scrollPulse 2s 1.5s infinite;
+    .eyebrow::before {
+      content: ''; width: 26px; height: 1.5px;
+      background: var(--terracotta); display: inline-block;
+    }
+    .eyebrow.on-dark { color: var(--cactus); }
+    .eyebrow.on-dark::before { background: var(--cactus); }
+
+    .display {
+      font-family: var(--font-display);
+      font-weight: 700;
+      line-height: 1.04;
+      letter-spacing: -0.01em;
+      color: var(--color-heading);
+    }
+    .lede {
+      font-size: var(--fs-body-lg);
+      line-height: 1.7;
+      color: var(--stone);
+      max-width: 46ch;
     }
 
-    /* ── SECTIONS COMMON ── */
-    section { padding: 6rem 2.5rem; }
-    .section-tag {
-      font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
-      margin-bottom: 0.75rem; display: block;
+    /* ── Buttons ── */
+    .btn {
+      --btn-bg: var(--terracotta);
+      --btn-fg: var(--ivory);
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      font-family: var(--font-sans); font-size: 0.92rem; font-weight: 600;
+      letter-spacing: 0.01em;
+      padding: 0.92rem 1.7rem;
+      background: var(--btn-bg); color: var(--btn-fg);
+      border: 1.5px solid var(--btn-bg);
+      border-radius: var(--radius-pill); cursor: pointer;
+      transition: transform var(--t-fast) var(--ease), box-shadow var(--t-base) var(--ease), background var(--t-base) var(--ease), border-color var(--t-base) var(--ease), color var(--t-base) var(--ease);
+      will-change: transform;
     }
-    .section-title {
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: clamp(28px, 4vw, 42px); font-weight: 700;
-      line-height: 1.15; margin-bottom: 3rem;
-    }
+    .btn svg { transition: transform var(--t-base) var(--ease); }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(194,91,40,0.32); }
+    .btn:hover svg { transform: translateX(4px); }
+    .btn:active { transform: translateY(0); }
 
-    /* ── REVEAL ANIMATION ── */
-    .reveal {
-      opacity: 0; transform: translateY(28px);
-      transition: opacity 0.65s ease, transform 0.65s ease;
+    .btn--ghost {
+      --btn-bg: transparent; --btn-fg: var(--teal-deep);
+      border-color: var(--line);
     }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
+    .btn--ghost:hover {
+      box-shadow: none; border-color: var(--teal-deep);
+      background: var(--teal-deep); color: var(--ivory);
+    }
+    .btn--on-dark { --btn-fg: var(--ivory); }
+    .btn--ghost.btn--on-dark {
+      --btn-fg: var(--cream); border-color: var(--line-dark);
+    }
+    .btn--ghost.btn--on-dark:hover { background: var(--cream); color: var(--teal-deep); }
 
-    /* ── SERVICES ── */
-    #servicios { background: var(--off-white); border-bottom: 0.5px solid var(--gray-pale); }
-    #servicios .section-tag { color: var(--green-main); }
-    #servicios .section-title { color: var(--black); }
-    .services-grid {
-      display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1px;
-      background: var(--gray-pale); border: 0.5px solid var(--gray-pale);
-      border-radius: 14px; overflow: hidden;
+    /* ════════════════════════════════════════════════
+       NAVIGATION
+       ════════════════════════════════════════════════ */
+    .nav {
+      position: fixed; inset: 0 0 auto 0; z-index: 100;
+      height: var(--nav-h);
+      display: flex; align-items: center;
+      background: rgba(244,241,232,0.72);
+      backdrop-filter: blur(16px) saturate(1.2);
+      -webkit-backdrop-filter: blur(16px) saturate(1.2);
+      border-bottom: 1px solid transparent;
+      transition: background var(--t-base) var(--ease), border-color var(--t-base) var(--ease), height var(--t-base) var(--ease);
     }
-    .service-card {
-      background: var(--off-white); padding: 2.25rem 2rem;
-      transition: background 0.25s;
-      cursor: default;
+    .nav.scrolled {
+      background: rgba(244,241,232,0.92);
+      border-bottom-color: var(--line);
+      box-shadow: var(--shadow-soft);
     }
-    .service-card:hover { background: #fff; }
-    .service-icon {
-      width: 40px; height: 40px; margin-bottom: 1.5rem;
-      background: var(--black); border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      transition: background 0.25s, transform 0.25s;
-    }
-    .service-card:hover .service-icon { background: var(--green-main); transform: scale(1.08); }
-    .service-card h3 { font-size: 16px; font-weight: 500; color: var(--black); margin-bottom: 0.6rem; }
-    .service-card p { font-size: 14px; color: var(--gray-mid); line-height: 1.7; }
-
-    /* ── ABOUT ── */
-    #nosotros {
-      background: var(--black);
-      border-bottom: 0.5px solid var(--green-dark);
-      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
-    }
-    #nosotros .section-tag { color: var(--green-light); }
-    #nosotros .section-title { color: #fff; margin-bottom: 1.25rem; }
-    .about-text p { font-size: 15px; color: var(--gray-light); line-height: 1.85; margin-bottom: 1rem; }
-    .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .stat-card {
-      background: var(--black-2); border: 0.5px solid var(--green-dark);
-      border-radius: 12px; padding: 1.5rem 1.25rem;
-      transition: border-color 0.25s, transform 0.25s;
-    }
-    .stat-card:hover { border-color: var(--green-main); transform: translateY(-3px); }
-    .stat-num {
-      font-family: Georgia, serif; font-size: 38px; color: var(--green-light);
-      font-weight: 700; line-height: 1;
-    }
-    .stat-label { font-size: 12px; color: var(--gray-mid); margin-top: 6px; }
-
-    /* ── PORTFOLIO ── */
-    #proyectos { background: var(--off-white); border-bottom: 0.5px solid var(--gray-pale); }
-    #proyectos .section-tag { color: var(--green-main); }
-    #proyectos .section-title { color: var(--black); }
-    .projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
-    .project-card {
-      background: #fff; border: 0.5px solid var(--gray-pale);
-      border-radius: 14px; overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-      cursor: default;
-    }
-    .project-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); border-color: var(--green-pale); }
-    .project-thumb {
-      height: 140px; display: flex; align-items: center; justify-content: center;
-      transition: opacity 0.25s;
-    }
-    .project-card:hover .project-thumb { opacity: 0.9; }
-    .project-body { padding: 1.4rem; }
-    .project-tag {
-      display: inline-block; font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
-      color: var(--green-dark); background: var(--green-pale);
-      padding: 3px 10px; border-radius: 20px; margin-bottom: 10px;
-    }
-    .project-body h3 { font-size: 15px; font-weight: 500; color: var(--black); margin-bottom: 5px; }
-    .project-body p { font-size: 13px; color: var(--gray-mid); line-height: 1.6; }
-
-    /* ── CONTACT ── */
-    #contacto {
-      background: var(--black);
-      display: flex; flex-direction: column; align-items: center; text-align: center;
-    }
-    #contacto .section-tag { color: var(--green-light); }
-    #contacto .section-title { color: #fff; margin-bottom: 0.75rem; }
-    #contacto > p { font-size: 15px; color: var(--gray-light); margin-bottom: 3rem; max-width: 420px; line-height: 1.75; }
-    .contact-form { width: 100%; max-width: 500px; display: flex; flex-direction: column; gap: 12px; text-align: left; }
-    .contact-form input, .contact-form textarea {
-      width: 100%; background: var(--black-2);
-      border: 0.5px solid var(--green-dark); border-radius: 8px;
-      padding: 13px 16px; font-size: 14px; color: #fff; outline: none;
-      font-family: inherit;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--gray-dark); }
-    .contact-form input:focus, .contact-form textarea:focus { border-color: var(--green-light); background: var(--black-3); }
-    .contact-form textarea { resize: vertical; min-height: 110px; }
-    .contact-form .btn-primary { align-self: flex-start; margin-top: 4px; }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--black);
-      border-top: 0.5px solid var(--green-dark);
-      padding: 1.5rem 2.5rem;
+    .nav__inner {
+      width: 100%; max-width: var(--container); margin-inline: auto;
+      padding-inline: var(--gutter);
       display: flex; align-items: center; justify-content: space-between;
     }
-    footer p { font-size: 12px; color: var(--gray-dark); }
-    footer span { font-size: 12px; color: var(--green-main); }
-
-    /* ── ANIMATIONS ── */
-    @keyframes fadeUp {
-      to { opacity: 1; transform: translateY(0); }
+    .brand { display: inline-flex; align-items: center; gap: 0.7rem; }
+    .brand__mark { width: 46px; height: auto; transition: transform var(--t-base) var(--ease); }
+    .brand:hover .brand__mark { transform: translateY(-1px) rotate(-3deg); }
+    .brand__text { line-height: 1; }
+    .brand__text strong {
+      display: block; font-family: var(--font-sans); font-weight: 700;
+      font-size: 1.02rem; letter-spacing: 0.04em; color: var(--teal-deep);
     }
-    @keyframes scrollPulse {
-      0%, 100% { opacity: 0.4; } 50% { opacity: 1; }
+    .brand__text small {
+      display: block; font-size: 0.6rem; font-weight: 500;
+      letter-spacing: 0.42em; color: var(--terracotta); margin-top: 3px; padding-left: 2px;
     }
 
-    /* ── MOBILE ── */
-    @media (max-width: 768px) {
-      .nav-links, .nav-cta { display: none; }
-      .hamburger { display: flex; }
-      .nav-links.open {
-        display: flex; flex-direction: column;
-        position: absolute; top: 64px; left: 0; right: 0;
-        background: rgba(13,13,13,0.97);
-        padding: 1.5rem 2.5rem; gap: 20px;
-        border-bottom: 0.5px solid var(--green-dark);
+    .nav__menu { display: flex; align-items: center; gap: clamp(1.2rem, 2.4vw, 2.2rem); list-style: none; }
+    .nav__link {
+      position: relative; font-size: 0.9rem; font-weight: 500; color: var(--stone);
+      padding: 0.4rem 0; transition: color var(--t-fast) var(--ease);
+    }
+    .nav__link::after {
+      content: ''; position: absolute; left: 0; bottom: -2px; height: 2px; width: 0;
+      background: var(--terracotta); border-radius: 2px;
+      transition: width var(--t-base) var(--ease);
+    }
+    .nav__link:hover, .nav__link.active { color: var(--teal-deep); }
+    .nav__link:hover::after, .nav__link.active::after { width: 100%; }
+
+    .nav__actions { display: flex; align-items: center; gap: 1rem; }
+    .nav .btn { padding: 0.66rem 1.3rem; font-size: 0.85rem; }
+
+    .nav__toggle {
+      display: none; width: 44px; height: 44px; border: none; background: none;
+      cursor: pointer; flex-direction: column; justify-content: center; gap: 6px; padding: 10px;
+    }
+    .nav__toggle span {
+      display: block; height: 2px; width: 100%; background: var(--teal-deep);
+      border-radius: 2px; transition: transform var(--t-base) var(--ease), opacity var(--t-fast) var(--ease);
+    }
+    .nav__toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .nav__toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .nav__toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* ════════════════════════════════════════════════
+       HERO
+       ════════════════════════════════════════════════ */
+    .hero {
+      position: relative; min-height: 100svh;
+      display: flex; align-items: center;
+      padding-top: calc(var(--nav-h) + 2rem); padding-bottom: 4rem;
+      overflow: hidden;
+      background:
+        radial-gradient(120% 90% at 85% 8%, rgba(127,165,82,0.10), transparent 55%),
+        radial-gradient(90% 70% at 8% 100%, rgba(194,91,40,0.08), transparent 60%),
+        var(--cream);
+    }
+    .hero__pattern {
+      position: absolute; inset: 0; opacity: 0.5; pointer-events: none;
+      -webkit-mask-image: radial-gradient(120% 80% at 70% 30%, #000 10%, transparent 75%);
+      mask-image: radial-gradient(120% 80% at 70% 30%, #000 10%, transparent 75%);
+    }
+    .hero__inner {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: 1.15fr 0.85fr; align-items: center; gap: clamp(2rem, 5vw, 4.5rem);
+      width: 100%;
+    }
+    .hero__eyebrow { margin-bottom: 1.6rem; }
+    .hero h1 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: var(--fs-hero); line-height: 0.98; letter-spacing: -0.018em;
+      color: var(--teal-deep); margin-bottom: 1.6rem; max-width: 14ch;
+    }
+    .hero h1 em { font-style: italic; color: var(--terracotta); font-weight: 500; }
+    .hero__sub { margin-bottom: 2.4rem; }
+    .hero__cta { display: flex; flex-wrap: wrap; gap: 0.9rem; align-items: center; }
+    .hero__meta {
+      margin-top: 2.8rem; display: flex; gap: 2.2rem; flex-wrap: wrap;
+      border-top: 1px solid var(--line); padding-top: 1.6rem;
+    }
+    .hero__meta-item strong {
+      display: block; font-family: var(--font-display); font-weight: 700;
+      font-size: 1.7rem; color: var(--teal-deep); line-height: 1;
+    }
+    .hero__meta-item span { font-size: var(--fs-caption); color: var(--stone-lo); }
+
+    /* Hero owl visual */
+    .hero__visual { position: relative; display: grid; place-items: center; }
+    .hero__owl-disc {
+      position: relative; width: min(100%, 440px); aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(circle at 50% 38%, var(--teal-soft), var(--teal) 45%, var(--teal-deep) 100%);
+      display: grid; place-items: center;
+      box-shadow: var(--shadow-lift), inset 0 0 0 1px rgba(255,255,255,0.06);
+      animation: floaty 7s var(--ease) infinite;
+    }
+    .hero__owl-disc::before {
+      content: ''; position: absolute; inset: -14px; border-radius: 50%;
+      border: 1.5px dashed rgba(127,165,82,0.4);
+      animation: spin 38s linear infinite;
+    }
+    .hero__owl { width: 82%; height: auto; filter: drop-shadow(0 10px 22px rgba(0,0,0,0.3)); }
+    .hero__badge {
+      position: absolute; background: var(--ivory); color: var(--teal-deep);
+      border-radius: var(--radius-pill); padding: 0.6rem 1.05rem;
+      font-size: 0.78rem; font-weight: 600; box-shadow: var(--shadow-card);
+      display: inline-flex; align-items: center; gap: 0.5rem;
+    }
+    .hero__badge::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--cactus); box-shadow: 0 0 0 4px rgba(127,165,82,0.22); }
+    .hero__badge--1 { top: 8%; left: -6%; animation: floaty 6s var(--ease) infinite 0.5s; }
+    .hero__badge--2 { bottom: 10%; right: -8%; animation: floaty 6.6s var(--ease) infinite 1.2s; }
+    .hero__badge--2::before { background: var(--terracotta); box-shadow: 0 0 0 4px rgba(194,91,40,0.22); }
+
+    .hero__scroll {
+      position: absolute; bottom: 1.8rem; left: var(--gutter); z-index: 2;
+      display: inline-flex; align-items: center; gap: 0.7rem;
+      font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--stone-lo);
+    }
+    .hero__scroll i { width: 30px; height: 1.5px; background: var(--stone-lo); position: relative; overflow: hidden; }
+    .hero__scroll i::after { content: ''; position: absolute; inset: 0; width: 40%; background: var(--terracotta); animation: scrollDash 2.2s var(--ease) infinite; }
+
+    @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes scrollDash { 0% { transform: translateX(-100%); } 100% { transform: translateX(250%); } }
+
+    /* ════════════════════════════════════════════════
+       MARQUEE / VALUES STRIP
+       ════════════════════════════════════════════════ */
+    .strip {
+      background: var(--teal-deep); color: var(--cream);
+      padding-block: 1.1rem; overflow: hidden; position: relative;
+      border-block: 1px solid var(--teal-ink);
+    }
+    .marquee { display: flex; width: max-content; animation: marquee 34s linear infinite; }
+    .strip:hover .marquee { animation-play-state: paused; }
+    .marquee__group { display: flex; align-items: center; flex-shrink: 0; }
+    .marquee__item {
+      display: inline-flex; align-items: center; gap: 1.1rem; padding-inline: 1.6rem;
+      font-family: var(--font-display); font-style: italic; font-size: 1.18rem; color: var(--cream);
+      white-space: nowrap;
+    }
+    .marquee__item img { width: 24px; height: auto; opacity: 0.92; }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+
+    /* ════════════════════════════════════════════════
+       SECTION HEADER
+       ════════════════════════════════════════════════ */
+    .sec-head { max-width: 640px; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+    .sec-head .eyebrow { margin-bottom: 1.1rem; }
+    .sec-head h2 { font-size: var(--fs-h1); margin-bottom: 1rem; }
+    .sec-head p { font-size: var(--fs-body-lg); color: var(--stone); line-height: 1.7; }
+    .sec-head--center { margin-inline: auto; text-align: center; }
+    .sec-head--center .eyebrow { justify-content: center; }
+
+    /* ════════════════════════════════════════════════
+       SERVICES — editorial cards
+       ════════════════════════════════════════════════ */
+    .services { background: var(--ivory); }
+    .services__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .scard {
+      position: relative; background: var(--cream);
+      border: 1px solid var(--line); border-radius: var(--radius-md);
+      padding: 2.2rem 2rem 2.4rem; overflow: hidden;
+      transition: transform var(--t-base) var(--ease-out), box-shadow var(--t-base) var(--ease), border-color var(--t-base) var(--ease);
+    }
+    .scard::after {
+      content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px;
+      background: linear-gradient(90deg, var(--terracotta), var(--cactus));
+      transform: scaleX(0); transform-origin: left; transition: transform var(--t-base) var(--ease);
+    }
+    .scard:hover { transform: translateY(-6px); box-shadow: var(--shadow-card); border-color: transparent; }
+    .scard:hover::after { transform: scaleX(1); }
+    .scard__num {
+      font-family: var(--font-display); font-size: 0.95rem; font-weight: 700;
+      color: var(--terracotta); letter-spacing: 0.05em;
+    }
+    .scard__icon {
+      width: 52px; height: 52px; margin: 1.4rem 0 1.5rem;
+      border-radius: 14px; display: grid; place-items: center;
+      background: var(--teal-deep); color: var(--cactus);
+      transition: transform var(--t-base) var(--ease-out), background var(--t-base) var(--ease);
+    }
+    .scard:hover .scard__icon { transform: rotate(-6deg) scale(1.06); background: var(--terracotta); color: var(--ivory); }
+    .scard h3 { font-family: var(--font-display); font-size: 1.45rem; font-weight: 700; color: var(--teal-deep); margin-bottom: 0.6rem; }
+    .scard p { font-size: 0.95rem; color: var(--stone); line-height: 1.65; }
+    .scard__list { list-style: none; margin-top: 1.3rem; display: flex; flex-wrap: wrap; gap: 0.45rem; }
+    .scard__list li {
+      font-size: 0.74rem; font-weight: 500; color: var(--teal); letter-spacing: 0.02em;
+      background: rgba(28,90,102,0.08); padding: 0.32rem 0.7rem; border-radius: var(--radius-pill);
+    }
+
+    /* ════════════════════════════════════════════════
+       PROCESS / ENFOQUE
+       ════════════════════════════════════════════════ */
+    .process__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; counter-reset: step; }
+    .pstep {
+      position: relative; padding-top: 2.4rem;
+      border-top: 2px solid var(--line);
+      transition: border-color var(--t-base) var(--ease);
+    }
+    .pstep:hover { border-top-color: var(--terracotta); }
+    .pstep__n {
+      position: absolute; top: -0.95rem; left: 0;
+      width: 1.9rem; height: 1.9rem; border-radius: 50%;
+      background: var(--cream); border: 2px solid var(--line);
+      display: grid; place-items: center; font-size: 0.8rem; font-weight: 700; color: var(--teal-deep);
+      transition: background var(--t-base) var(--ease), border-color var(--t-base) var(--ease), color var(--t-base) var(--ease);
+    }
+    .pstep:hover .pstep__n { background: var(--terracotta); border-color: var(--terracotta); color: var(--ivory); }
+    .pstep h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--teal-deep); margin-bottom: 0.5rem; }
+    .pstep p { font-size: 0.92rem; color: var(--stone); line-height: 1.6; }
+
+    /* ════════════════════════════════════════════════
+       ABOUT + VALUES (dark teal)
+       ════════════════════════════════════════════════ */
+    .about { background: var(--teal-deep); color: var(--cream); position: relative; overflow: hidden; }
+    .about__watermark {
+      position: absolute; right: -6%; top: 50%; transform: translateY(-50%);
+      width: 520px; max-width: 56%; opacity: 0.05; pointer-events: none;
+    }
+    .about__inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2.5rem, 5vw, 5rem); align-items: center; }
+    .about h2 { font-size: var(--fs-h1); color: var(--ivory); margin-bottom: 1.3rem; }
+    .about p { color: rgba(244,241,232,0.78); line-height: 1.8; margin-bottom: 1.1rem; font-size: 1.02rem; }
+    .about p strong { color: var(--cactus); font-weight: 600; }
+    .values { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.8rem; }
+    .values li {
+      list-style: none; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.02em;
+      padding: 0.5rem 1rem; border: 1px solid var(--line-dark); border-radius: var(--radius-pill);
+      color: var(--cream); transition: background var(--t-base) var(--ease), border-color var(--t-base) var(--ease), transform var(--t-fast) var(--ease);
+    }
+    .values li:hover { background: rgba(127,165,82,0.16); border-color: var(--cactus); transform: translateY(-2px); }
+
+    .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .stat {
+      background: rgba(255,255,255,0.04); border: 1px solid var(--line-dark);
+      border-radius: var(--radius-md); padding: 1.6rem 1.4rem;
+      transition: transform var(--t-base) var(--ease-out), border-color var(--t-base) var(--ease), background var(--t-base) var(--ease);
+    }
+    .stat:hover { transform: translateY(-4px); border-color: var(--cactus); background: rgba(255,255,255,0.06); }
+    .stat strong { display: block; font-family: var(--font-display); font-weight: 700; font-size: 2.6rem; color: var(--cactus); line-height: 1; }
+    .stat span { font-size: 0.85rem; color: rgba(244,241,232,0.65); margin-top: 0.5rem; display: block; }
+
+    /* ════════════════════════════════════════════════
+       PROJECTS
+       ════════════════════════════════════════════════ */
+    .work__grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.25rem; }
+    .pcard {
+      position: relative; grid-column: span 2; display: flex; flex-direction: column;
+      background: var(--ivory); border: 1px solid var(--line); border-radius: var(--radius-md);
+      overflow: hidden; transition: transform var(--t-base) var(--ease-out), box-shadow var(--t-base) var(--ease), border-color var(--t-base) var(--ease);
+    }
+    .pcard--wide { grid-column: span 3; }
+    .pcard:hover { transform: translateY(-6px); box-shadow: var(--shadow-card); border-color: transparent; }
+    .pcard__media {
+      aspect-ratio: 16/10; position: relative; overflow: hidden;
+      display: grid; place-items: center;
+    }
+    .pcard--wide .pcard__media { aspect-ratio: 16/8; }
+    .pcard__media svg.art { width: 64%; transition: transform var(--t-slow) var(--ease-out); }
+    .pcard:hover .pcard__media svg.art { transform: scale(1.07) rotate(2deg); }
+    .pcard__media-pattern { position: absolute; inset: 0; opacity: 0.18; }
+    .pcard__body { padding: 1.4rem 1.5rem 1.6rem; display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
+    .pcard__tag {
+      align-self: flex-start; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--terracotta); background: rgba(194,91,40,0.1); padding: 0.3rem 0.75rem; border-radius: var(--radius-pill);
+    }
+    .pcard__body h3 { font-family: var(--font-display); font-size: 1.35rem; color: var(--teal-deep); }
+    .pcard__body p { font-size: 0.92rem; color: var(--stone); line-height: 1.6; }
+    .pcard__link {
+      margin-top: auto; padding-top: 0.6rem; font-size: 0.85rem; font-weight: 600; color: var(--teal);
+      display: inline-flex; align-items: center; gap: 0.4rem;
+    }
+    .pcard__link svg { transition: transform var(--t-base) var(--ease); }
+    .pcard:hover .pcard__link svg { transform: translateX(4px); }
+
+    /* ════════════════════════════════════════════════
+       TESTIMONIALS — editorial
+       ════════════════════════════════════════════════ */
+    .quotes { background: var(--cream-deep); }
+    .quotes__grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1.25rem; }
+    .quote {
+      background: var(--ivory); border: 1px solid var(--line); border-radius: var(--radius-md);
+      padding: 2.4rem; display: flex; flex-direction: column;
+      transition: transform var(--t-base) var(--ease-out), box-shadow var(--t-base) var(--ease);
+    }
+    .quote:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
+    .quote--feature { grid-row: span 2; justify-content: space-between; background: var(--teal-deep); color: var(--cream); border-color: transparent; }
+    .quote__mark { font-family: var(--font-display); font-size: 4rem; line-height: 0.6; color: var(--terracotta); margin-bottom: 0.5rem; }
+    .quote--feature .quote__mark { color: var(--cactus); }
+    .quote blockquote {
+      font-family: var(--font-display); font-size: 1.5rem; line-height: 1.4; color: var(--teal-deep);
+      font-weight: 500; margin-bottom: 1.6rem;
+    }
+    .quote--feature blockquote { color: var(--ivory); font-size: 1.85rem; }
+    .quote__by { display: flex; align-items: center; gap: 0.85rem; margin-top: auto; }
+    .quote__avatar {
+      width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+      display: grid; place-items: center; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem;
+      background: var(--cactus); color: var(--teal-deep);
+    }
+    .quote--feature .quote__avatar { background: var(--cactus); }
+    .quote__by strong { display: block; font-size: 0.92rem; font-weight: 600; color: inherit; }
+    .quote--feature .quote__by strong { color: var(--ivory); }
+    .quote__by span { font-size: 0.8rem; color: var(--stone-lo); }
+    .quote--feature .quote__by span { color: rgba(244,241,232,0.6); }
+
+    /* ════════════════════════════════════════════════
+       CTA
+       ════════════════════════════════════════════════ */
+    .cta { padding-block: clamp(4rem, 9vw, 7.5rem); }
+    .cta__box {
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, var(--terracotta), var(--clay));
+      border-radius: var(--radius-lg); padding: clamp(2.5rem, 6vw, 5rem);
+      text-align: center; color: var(--ivory);
+      box-shadow: var(--shadow-lift);
+    }
+    .cta__box-pattern { position: absolute; inset: 0; opacity: 0.12; pointer-events: none; }
+    .cta__box > * { position: relative; z-index: 2; }
+    .cta h2 { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-h1); color: var(--ivory); line-height: 1.05; margin-bottom: 1.1rem; max-width: 16ch; margin-inline: auto; }
+    .cta p { font-size: var(--fs-body-lg); color: rgba(255,255,255,0.86); max-width: 44ch; margin: 0 auto 2.2rem; line-height: 1.65; }
+    .cta__actions { display: flex; gap: 0.9rem; justify-content: center; flex-wrap: wrap; }
+    .cta .btn { --btn-bg: var(--ivory); --btn-fg: var(--clay); border-color: var(--ivory); }
+    .cta .btn:hover { box-shadow: 0 14px 30px rgba(0,0,0,0.25); }
+    .cta .btn--ghost { --btn-bg: transparent; --btn-fg: var(--ivory); border-color: rgba(255,255,255,0.5); }
+    .cta .btn--ghost:hover { background: var(--ivory); color: var(--clay); border-color: var(--ivory); }
+
+    /* ════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════ */
+    .footer { background: var(--teal-ink); color: var(--cream); padding-block: clamp(3rem, 6vw, 5rem) 2rem; }
+    .footer__top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 2.5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--line-dark); }
+    .footer__brand .brand__mark { width: 52px; height: auto; }
+    .footer__brand .brand__text strong { color: var(--ivory); }
+    .footer__brand p { margin-top: 1.2rem; color: rgba(244,241,232,0.6); font-size: 0.92rem; line-height: 1.7; max-width: 32ch; }
+    .footer__col h4 { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cactus); margin-bottom: 1.1rem; }
+    .footer__col ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+    .footer__col a { font-size: 0.92rem; color: rgba(244,241,232,0.72); transition: color var(--t-fast) var(--ease), padding var(--t-fast) var(--ease); }
+    .footer__col a:hover { color: var(--ivory); padding-left: 4px; }
+    .footer__bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 1.8rem; flex-wrap: wrap; gap: 1rem; }
+    .footer__bottom p { font-size: 0.82rem; color: rgba(244,241,232,0.5); }
+    .footer__social { display: flex; gap: 0.6rem; }
+    .footer__social a {
+      width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line-dark);
+      display: grid; place-items: center; color: var(--cream);
+      transition: background var(--t-base) var(--ease), border-color var(--t-base) var(--ease), transform var(--t-fast) var(--ease);
+    }
+    .footer__social a:hover { background: var(--terracotta); border-color: var(--terracotta); transform: translateY(-2px); }
+
+    /* ════════════════════════════════════════════════
+       CONTACT (inside CTA flow optional) — minimal form modal-free
+       ════════════════════════════════════════════════ */
+
+    /* ════════════════════════════════════════════════
+       REVEAL ANIMATIONS
+       ════════════════════════════════════════════════ */
+    .reveal { opacity: 0; transform: translateY(26px); transition: opacity var(--t-slow) var(--ease-out), transform var(--t-slow) var(--ease-out); }
+    .reveal.in { opacity: 1; transform: none; }
+    [data-delay="1"] { transition-delay: 0.08s; }
+    [data-delay="2"] { transition-delay: 0.16s; }
+    [data-delay="3"] { transition-delay: 0.24s; }
+    [data-delay="4"] { transition-delay: 0.32s; }
+
+    /* ════════════════════════════════════════════════
+       RESPONSIVE
+       ════════════════════════════════════════════════ */
+    @media (max-width: 980px) {
+      .hero__inner { grid-template-columns: 1fr; }
+      .hero__visual { order: -1; }
+      .hero__owl-disc { width: min(78%, 320px); }
+      .hero h1 { max-width: 18ch; }
+      .about__inner { grid-template-columns: 1fr; }
+      .quotes__grid { grid-template-columns: 1fr; }
+      .quote--feature { grid-row: auto; }
+      .work__grid { grid-template-columns: repeat(4, 1fr); }
+      .pcard, .pcard--wide { grid-column: span 2; }
+      .footer__top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .footer__brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 760px) {
+      .nav__menu { display: none; }
+      .nav__actions .btn { display: none; }
+      .nav__toggle { display: flex; }
+      .nav__menu.open {
+        display: flex; flex-direction: column; align-items: flex-start; gap: 0.4rem;
+        position: fixed; inset: var(--nav-h) 0 auto 0;
+        background: var(--cream); border-bottom: 1px solid var(--line);
+        padding: 1.2rem var(--gutter) 1.6rem; box-shadow: var(--shadow-card);
       }
-      #hero { padding: 7rem 1.5rem 4rem; }
-      section { padding: 4rem 1.5rem; }
-      .services-grid, .projects-grid { grid-template-columns: 1fr; }
-      #nosotros { grid-template-columns: 1fr; gap: 3rem; }
-      footer { flex-direction: column; gap: 8px; text-align: center; }
+      .nav__menu.open .nav__link { width: 100%; padding: 0.7rem 0; font-size: 1.05rem; border-bottom: 1px solid var(--line); }
+      .nav__menu.open .btn--mobile { display: inline-flex; margin-top: 0.8rem; }
+      .services__grid { grid-template-columns: 1fr; }
+      .process__grid { grid-template-columns: 1fr 1fr; gap: 1.5rem 1.25rem; }
+      .stats { grid-template-columns: 1fr 1fr; }
+      .work__grid { grid-template-columns: 1fr; }
+      .pcard, .pcard--wide { grid-column: span 1; }
+      .footer__top { grid-template-columns: 1fr; gap: 1.8rem; }
+    }
+    @media (max-width: 420px) {
+      .process__grid { grid-template-columns: 1fr; }
+      .hero__meta { gap: 1.4rem; }
+    }
+
+    .btn--mobile { display: none; }
+
+    /* ── Reduced motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+      .reveal { opacity: 1; transform: none; }
     }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
 
-  <nav id="navbar">
-    <a href="#hero" class="nav-logo">
-      <svg width="30" height="34" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
-        <path d="M100 8 L192 52 L192 140 L100 212 L8 140 L8 52 Z" fill="#1A3D0A"/>
-        <path d="M100 8 L192 52 L148 52 Z" fill="#4A8A18"/>
-        <path d="M100 8 L52 52 L8 52 Z" fill="#4A8A18"/>
-        <path d="M62 52 L52 18 L80 52 Z" fill="#3B6D11"/>
-        <path d="M138 52 L148 18 L120 52 Z" fill="#3B6D11"/>
-        <path d="M8 52 L52 52 L100 90 L148 52 L192 52 L192 100 L100 130 L8 100 Z" fill="#2A5A0E"/>
-        <ellipse cx="68" cy="80" rx="22" ry="20" fill="#97C459"/>
-        <ellipse cx="132" cy="80" rx="22" ry="20" fill="#97C459"/>
-        <ellipse cx="68" cy="80" rx="13" ry="14" fill="#3B6D11"/>
-        <ellipse cx="132" cy="80" rx="13" ry="14" fill="#3B6D11"/>
-        <ellipse cx="68" cy="82" rx="7" ry="9" fill="#0D0D0D"/>
-        <ellipse cx="132" cy="82" rx="7" ry="9" fill="#0D0D0D"/>
-        <path d="M100 90 L85 110 L100 120 L115 110 Z" fill="#97C459"/>
-        <path d="M8 100 L100 130 L8 140 Z" fill="#27500A"/>
-        <path d="M192 100 L100 130 L192 140 Z" fill="#27500A"/>
-        <path d="M8 140 L100 130 L100 212 Z" fill="#1A3D0A"/>
-        <path d="M192 140 L100 130 L100 212 Z" fill="#1A3D0A"/>
-      </svg>
-      <div class="nav-logo-text">
-        <span>Tecolote</span>
-        <small>STUDIO</small>
+  <!-- ══════════ SVG DEFS: owl symbol + patterns ══════════ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <!-- Mexican-inspired diamond/greca pattern -->
+    <pattern id="greca" width="56" height="32" patternUnits="userSpaceOnUse" patternTransform="scale(1.1)">
+      <g fill="none" stroke="currentColor" stroke-width="1.4">
+        <path d="M28 2 L54 16 L28 30 L2 16 Z"/>
+        <path d="M28 10 L40 16 L28 22 L16 16 Z" fill="currentColor" stroke="none" opacity="0.55"/>
+        <path d="M0 16 L2 16 M54 16 L56 16"/>
+      </g>
+    </pattern>
+  </svg>
+
+  <!-- ══════════ NAV ══════════ -->
+  <nav class="nav" id="nav" aria-label="Principal">
+    <div class="nav__inner">
+      <a href="#hero" class="brand" aria-label="Tecolote Studio — inicio">
+        <img class="brand__mark" src="owl-teal.png" alt="" width="364" height="255" decoding="async">
+        <span class="brand__text"><strong>TECOLOTE</strong><small>STUDIO</small></span>
+      </a>
+      <ul class="nav__menu" id="navMenu">
+        <li><a class="nav__link" href="#servicios">Servicios</a></li>
+        <li><a class="nav__link" href="#enfoque">Enfoque</a></li>
+        <li><a class="nav__link" href="#nosotros">Nosotros</a></li>
+        <li><a class="nav__link" href="#proyectos">Proyectos</a></li>
+        <li><a class="nav__link" href="#testimonios">Clientes</a></li>
+        <li><a class="btn btn--mobile" href="#contacto">Hablemos</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a class="btn" href="#contacto">Iniciar proyecto
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-    <a href="#contacto" class="nav-cta">Hablemos</a>
-    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
     </div>
   </nav>
 
-  <section id="hero">
-    <div class="hero-grid"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-content">
-      <p class="hero-tag">Estudio digital &middot; Monterrey, MX</p>
-      <h1>Construimos lo <em>digital.</em></h1>
-      <p class="hero-sub">Apps, bots de inteligencia artificial y experiencias digitales hechas a la medida. Tecnología con propósito.</p>
-      <div class="hero-cta">
-        <a href="#contacto" class="btn-primary">Hablemos de tu proyecto</a>
-        <a href="#proyectos" class="btn-secondary">Ver proyectos</a>
-      </div>
-    </div>
-    <div class="hero-scroll">
-      <div class="scroll-line"></div>
-      Scroll
-    </div>
-  </section>
+  <main id="main">
 
-  <section id="servicios">
-    <span class="section-tag reveal">Servicios</span>
-    <h2 class="section-title reveal reveal-delay-1">Lo que hacemos</h2>
-    <div class="services-grid">
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#97C459" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+    <!-- ══════════ HERO ══════════ -->
+    <header class="hero" id="hero">
+      <svg class="hero__pattern" aria-hidden="true" preserveAspectRatio="xMidYMid slice" style="color:var(--teal)">
+        <rect width="100%" height="100%" fill="url(#greca)" opacity="0.5"/>
+      </svg>
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__copy">
+            <p class="eyebrow hero__eyebrow">Estudio digital · Monterrey, MX</p>
+            <h1 class="reveal in">Construimos lo digital <em>con alma.</em></h1>
+            <p class="lede hero__sub reveal in" data-delay="1">
+              Diseñamos y desarrollamos apps, inteligencia artificial y experiencias a la medida.
+              Estrategia, oficio y tecnología en partes iguales —donde la naturaleza se encuentra con el diseño.
+            </p>
+            <div class="hero__cta reveal in" data-delay="2">
+              <a class="btn" href="#contacto">Cuéntanos tu idea
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a class="btn btn--ghost" href="#proyectos">Ver nuestro trabajo</a>
+            </div>
+            <div class="hero__meta reveal in" data-delay="3">
+              <div class="hero__meta-item"><strong>+10</strong><span>Productos lanzados</span></div>
+              <div class="hero__meta-item"><strong>3 años</strong><span>Construyendo</span></div>
+              <div class="hero__meta-item"><strong>100%</strong><span>Hecho a medida</span></div>
+            </div>
+          </div>
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero__owl-disc">
+              <img class="hero__owl" src="owl-cream.png" alt="Logotipo de Tecolote Studio: un tecolote con las alas extendidas" width="364" height="255" fetchpriority="high">
+              <span class="hero__badge hero__badge--1">Diseño + Código</span>
+              <span class="hero__badge hero__badge--2">IA aplicada</span>
+            </div>
+          </div>
         </div>
-        <h3>Desarrollo de apps</h3>
-        <p>Aplicaciones web y móviles diseñadas para escalar. De la idea al producto en producción.</p>
       </div>
-      <div class="service-card reveal reveal-delay-2">
-        <div class="service-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#97C459" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg>
-        </div>
-        <h3>Bots e IA</h3>
-        <p>Automatización inteligente y asistentes conversacionales para negocios que quieren ir más lejos.</p>
-      </div>
-      <div class="service-card reveal reveal-delay-3">
-        <div class="service-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#97C459" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        </div>
-        <h3>Desarrollos a medida</h3>
-        <p>Soluciones digitales personalizadas: integraciones, APIs, herramientas internas y más.</p>
-      </div>
-    </div>
-  </section>
+      <span class="hero__scroll"><i></i>Desliza</span>
+    </header>
 
-  <section id="nosotros">
-    <div class="about-text">
-      <span class="section-tag reveal">Nosotros</span>
-      <h2 class="section-title reveal reveal-delay-1">Un estudio pequeño con ideas grandes</h2>
-      <p class="reveal reveal-delay-2">Tecolote Studio nació con la idea de que la tecnología bien hecha no tiene que ser complicada. Trabajamos de cerca con nuestros clientes, entendemos su negocio y construimos soluciones que realmente funcionan.</p>
-      <p class="reveal reveal-delay-3">Somos curiosos por naturaleza. Nos apasiona explorar nuevas tecnologías y aplicarlas donde tienen sentido.</p>
-    </div>
-    <div class="about-stats reveal reveal-delay-2">
-      <div class="stat-card">
-        <div class="stat-num">10+</div>
-        <div class="stat-label">Proyectos entregados</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">3</div>
-        <div class="stat-label">Años de experiencia</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">100%</div>
-        <div class="stat-label">Clientes satisfechos</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">MX</div>
-        <div class="stat-label">Con orgullo regio</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="proyectos">
-    <span class="section-tag reveal">Proyectos</span>
-    <h2 class="section-title reveal reveal-delay-1">Trabajo reciente</h2>
-    <div class="projects-grid">
-      <div class="project-card reveal reveal-delay-1">
-        <div class="project-thumb" style="background:#EAF3DE;">
-          <svg width="52" height="52" viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="6" fill="#3B6D11" opacity=".15"/><rect x="14" y="14" width="20" height="20" rx="4" fill="#3B6D11" opacity=".3"/><circle cx="24" cy="24" r="6" fill="#3B6D11"/></svg>
+    <!-- ══════════ VALUES MARQUEE ══════════ -->
+    <div class="strip" aria-hidden="true">
+      <div class="marquee">
+        <div class="marquee__group">
+          <span class="marquee__item">Creativo <img src="owl-cream.png" alt="" width="364" height="255" loading="lazy"></span>
+          <span class="marquee__item">Colaborativo <img src="owl-cream.png" alt="" width="364" height="255" loading="lazy"></span>
+          <span class="marquee__item">Auténtico <img src="owl-cream.png" alt="" width="364" height="255" loading="lazy"></span>
+          <span class="marquee__item">Versátil <img src="owl-cream.png" alt="" width="364" height="255" loading="lazy"></span>
+          <span class="marquee__item">Perceptivo <img src="owl-cream.png" alt="" width="364" height="255" loading="lazy"></span>
         </div>
-        <div class="project-body">
-          <span class="project-tag">App</span>
-          <h3>Proyecto 01</h3>
-          <p>Descripción breve del proyecto y el problema que resolvió.</p>
-        </div>
-      </div>
-      <div class="project-card reveal reveal-delay-2">
-        <div class="project-thumb" style="background:#0D0D0D;">
-          <svg width="52" height="52" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" fill="#1A3D0A"/><circle cx="24" cy="24" r="8" fill="#3B6D11"/><circle cx="24" cy="24" r="3" fill="#97C459"/></svg>
-        </div>
-        <div class="project-body">
-          <span class="project-tag">Bot IA</span>
-          <h3>Proyecto 02</h3>
-          <p>Descripción breve del proyecto y el problema que resolvió.</p>
-        </div>
-      </div>
-      <div class="project-card reveal reveal-delay-3">
-        <div class="project-thumb" style="background:#F5F5F0; border-bottom: 0.5px solid #D3D1C7;">
-          <svg width="52" height="52" viewBox="0 0 48 48" fill="none"><rect x="6" y="12" width="36" height="24" rx="4" fill="#D3D1C7"/><rect x="10" y="16" width="28" height="16" rx="2" fill="#888780"/><rect x="14" y="20" width="8" height="8" rx="1" fill="#3B6D11"/><rect x="26" y="20" width="12" height="3" rx="1" fill="#F5F5F0"/><rect x="26" y="26" width="8" height="2" rx="1" fill="#F5F5F0" opacity=".5"/></svg>
-        </div>
-        <div class="project-body">
-          <span class="project-tag">Web</span>
-          <h3>Proyecto 03</h3>
-          <p>Descripción breve del proyecto y el problema que resolvió.</p>
+        <div class="marquee__group">
+          <span class="marquee__item">Creativo <img src="owl-cream.png" alt="" width="364" height="255" loading="lazy"></span>
+          <span class="marquee__item">Colaborativo <img src="owl-cream.png" alt="" width="364" height="255" loading="lazy"></span>
+          <span class="marquee__item">Auténtico <img src="owl-cream.png" alt="" width="364" height="255" loading="lazy"></span>
+          <span class="marquee__item">Versátil <img src="owl-cream.png" alt="" width="364" height="255" loading="lazy"></span>
+          <span class="marquee__item">Perceptivo <img src="owl-cream.png" alt="" width="364" height="255" loading="lazy"></span>
         </div>
       </div>
     </div>
-  </section>
 
-  <section id="contacto">
-    <span class="section-tag reveal">Contacto</span>
-    <h2 class="section-title reveal reveal-delay-1">¿Tienes un proyecto en mente?</h2>
-    <p class="reveal reveal-delay-2">Cuéntanos qué necesitas. Respondemos en menos de 24 horas.</p>
-    <form class="contact-form reveal reveal-delay-3" onsubmit="handleSubmit(event)">
-      <input type="text" placeholder="Tu nombre" required>
-      <input type="email" placeholder="Tu correo" required>
-      <textarea placeholder="Cuéntanos de tu proyecto..." required></textarea>
-      <button type="submit" class="btn-primary">Enviar mensaje</button>
-    </form>
-  </section>
+    <!-- ══════════ SERVICES ══════════ -->
+    <section class="section services" id="servicios">
+      <div class="container">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Lo que hacemos</p>
+          <h2 class="display">Servicios pensados para que tu producto vuele.</h2>
+          <p>No vendemos horas: construimos productos. Cada proyecto combina estrategia, diseño y desarrollo para resolver un problema real de tu negocio.</p>
+        </div>
+        <div class="services__grid">
+          <article class="scard reveal" data-delay="1">
+            <span class="scard__num">01</span>
+            <div class="scard__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+            </div>
+            <h3>Apps web y móviles</h3>
+            <p>Del concepto al producto en producción. Interfaces rápidas, escalables y cuidadas hasta el último pixel.</p>
+            <ul class="scard__list"><li>Web apps</li><li>iOS · Android</li><li>Dashboards</li></ul>
+          </article>
+          <article class="scard reveal" data-delay="2">
+            <span class="scard__num">02</span>
+            <div class="scard__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg>
+            </div>
+            <h3>Inteligencia artificial</h3>
+            <p>Asistentes conversacionales, automatización y modelos a la medida que le quitan trabajo repetitivo a tu equipo.</p>
+            <ul class="scard__list"><li>Chatbots</li><li>Automatización</li><li>Integraciones</li></ul>
+          </article>
+          <article class="scard reveal" data-delay="3">
+            <span class="scard__num">03</span>
+            <div class="scard__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Desarrollos a la medida</h3>
+            <p>APIs, herramientas internas e integraciones que conectan tus sistemas y hacen que todo fluya.</p>
+            <ul class="scard__list"><li>APIs</li><li>Tooling interno</li><li>Integraciones</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2026 Tecolote Studio. Todos los derechos reservados.</p>
-    <span>Monterrey, MX</span>
+    <!-- ══════════ PROCESS / ENFOQUE ══════════ -->
+    <section class="section" id="enfoque">
+      <div class="container">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Cómo trabajamos</p>
+          <h2 class="display">Un proceso claro, sin sorpresas.</h2>
+          <p>Somos un estudio pequeño y eso es nuestra ventaja: trabajas directo con quien diseña y construye. Cuatro etapas, comunicación constante.</p>
+        </div>
+        <div class="process__grid">
+          <article class="pstep reveal" data-delay="1"><span class="pstep__n">1</span><h3>Escuchamos</h3><p>Entendemos tu negocio, tus usuarios y el problema real antes de escribir una línea de código.</p></article>
+          <article class="pstep reveal" data-delay="2"><span class="pstep__n">2</span><h3>Diseñamos</h3><p>Definimos la estrategia y prototipamos la experiencia. Validamos antes de invertir en desarrollo.</p></article>
+          <article class="pstep reveal" data-delay="3"><span class="pstep__n">3</span><h3>Construimos</h3><p>Desarrollo iterativo con entregas frecuentes. Ves avances reales cada semana, no promesas.</p></article>
+          <article class="pstep reveal" data-delay="4"><span class="pstep__n">4</span><h3>Acompañamos</h3><p>Lanzamos, medimos y mejoramos. Seguimos contigo cuando el producto ya vive en el mundo.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ ABOUT + VALUES ══════════ -->
+    <section class="section about" id="nosotros">
+      <img class="about__watermark" src="owl-cream.png" alt="" width="364" height="255" aria-hidden="true" loading="lazy">
+      <div class="container">
+        <div class="about__inner">
+          <div class="reveal">
+            <p class="eyebrow on-dark">Nosotros</p>
+            <h2 class="display">Un estudio pequeño con ideas grandes —y mexicano de corazón.</h2>
+            <p>Tecolote Studio nació de una idea simple: <strong>la tecnología bien hecha no tiene por qué ser fría ni complicada</strong>. Trabajamos de cerca, entendemos tu negocio y construimos cosas que de verdad funcionan.</p>
+            <p>Como el tecolote, somos curiosos y observadores. Vemos lo que otros pasan por alto y lo convertimos en producto. Naturaleza, oficio y tecnología, en partes iguales.</p>
+            <ul class="values" aria-label="Valores de marca">
+              <li>Creativo</li><li>Colaborativo</li><li>Auténtico</li><li>Versátil</li><li>Perceptivo</li>
+            </ul>
+          </div>
+          <div class="stats reveal" data-delay="2">
+            <div class="stat"><strong>+10</strong><span>Proyectos entregados</span></div>
+            <div class="stat"><strong>3</strong><span>Años de experiencia</span></div>
+            <div class="stat"><strong>100%</strong><span>Clientes que repiten</span></div>
+            <div class="stat"><strong>MX</strong><span>Orgullo regio</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ PROJECTS ══════════ -->
+    <section class="section" id="proyectos">
+      <div class="container">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Trabajo reciente</p>
+          <h2 class="display">Productos que ya viven en el mundo.</h2>
+          <p>Una muestra del tipo de retos que nos gusta resolver. (Espacios listos para reemplazar con tus casos reales.)</p>
+        </div>
+        <div class="work__grid">
+          <article class="pcard pcard--wide reveal" data-delay="1">
+            <div class="pcard__media" style="background:linear-gradient(135deg,#1C5A66,#0E2E35)">
+              <svg class="pcard__media-pattern" preserveAspectRatio="xMidYMid slice" style="color:var(--cactus)"><rect width="100%" height="100%" fill="url(#greca)"/></svg>
+              <svg class="art" viewBox="0 0 48 48" fill="none" stroke="#F4F1E8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="13" y="6" width="22" height="36" rx="4"/><path d="M21 36h6"/><path d="M18 14h12M18 20h12M18 26h7"/></svg>
+            </div>
+            <div class="pcard__body">
+              <span class="pcard__tag">App móvil</span>
+              <h3>Plataforma de reservas</h3>
+              <p>App de agendamiento con pagos integrados y panel de administración en tiempo real.</p>
+              <span class="pcard__link">Ver caso <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </article>
+          <article class="pcard reveal" data-delay="2">
+            <div class="pcard__media" style="background:linear-gradient(135deg,#C25B28,#5E3A28)">
+              <svg class="art" viewBox="0 0 48 48" fill="none" stroke="#F4F1E8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="20" r="9"/><path d="M24 29v6M16 38h16M20 20h8M24 16v8"/></svg>
+            </div>
+            <div class="pcard__body">
+              <span class="pcard__tag">IA · Bot</span>
+              <h3>Asistente conversacional</h3>
+              <p>Bot de atención que resuelve el 70% de las consultas sin intervención humana.</p>
+              <span class="pcard__link">Ver caso <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </article>
+          <article class="pcard reveal" data-delay="3">
+            <div class="pcard__media" style="background:linear-gradient(135deg,#7FA552,#1C5A66)">
+              <svg class="art" viewBox="0 0 48 48" fill="none" stroke="#F4F1E8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="10" width="36" height="28" rx="3"/><path d="M6 18h36M12 26h10M12 31h16"/></svg>
+            </div>
+            <div class="pcard__body">
+              <span class="pcard__tag">Web</span>
+              <h3>Sitio corporativo</h3>
+              <p>Identidad digital y CMS a la medida para una marca en plena expansión.</p>
+              <span class="pcard__link">Ver caso <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </article>
+          <article class="pcard pcard--wide reveal" data-delay="2">
+            <div class="pcard__media" style="background:linear-gradient(135deg,#0E2E35,#2E7E8C)">
+              <svg class="pcard__media-pattern" preserveAspectRatio="xMidYMid slice" style="color:var(--terracotta-lo)"><rect width="100%" height="100%" fill="url(#greca)"/></svg>
+              <svg class="art" viewBox="0 0 48 48" fill="none" stroke="#F4F1E8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 34l8-10 7 6 9-14 8 10"/><circle cx="16" cy="24" r="1.6"/><circle cx="32" cy="16" r="1.6"/></svg>
+            </div>
+            <div class="pcard__body">
+              <span class="pcard__tag">Producto · Datos</span>
+              <h3>Panel de analítica</h3>
+              <p>Dashboard que convierte millones de eventos en decisiones claras para el equipo directivo.</p>
+              <span class="pcard__link">Ver caso <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ TESTIMONIALS ══════════ -->
+    <section class="section quotes" id="testimonios">
+      <div class="container">
+        <div class="sec-head reveal">
+          <p class="eyebrow">En sus palabras</p>
+          <h2 class="display">Clientes que confiaron y volvieron.</h2>
+        </div>
+        <div class="quotes__grid">
+          <article class="quote quote--feature reveal">
+            <div>
+              <div class="quote__mark">“</div>
+              <blockquote>Entendieron nuestro negocio mejor que nosotros. No entregaron un proyecto: entregaron un socio.</blockquote>
+            </div>
+            <div class="quote__by">
+              <span class="quote__avatar">MR</span>
+              <div><strong>María Robles</strong><span>Directora de Operaciones, Retail MX</span></div>
+            </div>
+          </article>
+          <article class="quote reveal" data-delay="1">
+            <div class="quote__mark">“</div>
+            <blockquote>Profesionales, cercanos y rápidos. El producto superó lo que imaginábamos.</blockquote>
+            <div class="quote__by">
+              <span class="quote__avatar">JL</span>
+              <div><strong>Jorge Luna</strong><span>Fundador, Startup Fintech</span></div>
+            </div>
+          </article>
+          <article class="quote reveal" data-delay="2">
+            <div class="quote__mark">“</div>
+            <blockquote>Trabajar con ellos se siente como tener un equipo interno de primer nivel.</blockquote>
+            <div class="quote__by">
+              <span class="quote__avatar">AC</span>
+              <div><strong>Ana Cantú</strong><span>Gerente de Producto, Logística</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CTA / CONTACT ══════════ -->
+    <section class="cta" id="contacto">
+      <div class="container">
+        <div class="cta__box reveal">
+          <svg class="cta__box-pattern" preserveAspectRatio="xMidYMid slice" style="color:#fff"><rect width="100%" height="100%" fill="url(#greca)"/></svg>
+          <p class="eyebrow on-dark" style="color:#fff;justify-content:center"><span style="background:#fff"></span></p>
+          <h2>¿Listo para construir algo que importe?</h2>
+          <p>Cuéntanos qué tienes en mente. Respondemos en menos de 24 horas con una propuesta concreta —sin compromiso.</p>
+          <div class="cta__actions">
+            <a class="btn" href="mailto:hola@tecolote.mx">Escríbenos
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="https://wa.me/528100000000" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#hero" class="brand" aria-label="Tecolote Studio — inicio">
+            <img class="brand__mark" src="owl-cream.png" alt="" width="364" height="255" loading="lazy">
+            <span class="brand__text"><strong>TECOLOTE</strong><small>STUDIO</small></span>
+          </a>
+          <p>Diseñamos y construimos productos digitales con alma. Estrategia, diseño y código desde Monterrey, México.</p>
+        </div>
+        <nav class="footer__col" aria-label="Navegación del sitio">
+          <h4>Estudio</h4>
+          <ul>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#enfoque">Enfoque</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+          </ul>
+        </nav>
+        <div class="footer__col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="mailto:hola@tecolote.mx">hola@tecolote.mx</a></li>
+            <li><a href="https://wa.me/528100000000" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="#contacto">Iniciar proyecto</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Síguenos</h4>
+          <ul>
+            <li><a href="#" rel="noopener">Instagram</a></li>
+            <li><a href="#" rel="noopener">LinkedIn</a></li>
+            <li><a href="#" rel="noopener">Behance</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> Tecolote Studio · Monterrey, MX. Todos los derechos reservados.</p>
+        <div class="footer__social" aria-label="Redes sociales">
+          <a href="#" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.3z"/></svg></a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script>
-    const navbar = document.getElementById('navbar');
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a');
+    (function () {
+      'use strict';
+      if (/[?&]noanim/.test(location.search)) {
+        document.querySelectorAll('.reveal').forEach(function (e) { e.classList.add('in'); });
+      }
+      var nav = document.getElementById('nav');
+      var toggle = document.getElementById('navToggle');
+      var menu = document.getElementById('navMenu');
+      var links = Array.prototype.slice.call(document.querySelectorAll('.nav__link'));
+      var sections = links.map(function (l) { return document.querySelector(l.getAttribute('href')); }).filter(Boolean);
 
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 40);
+      // Scrolled state
+      var onScroll = function () { nav.classList.toggle('scrolled', window.scrollY > 24); };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
 
-      let current = '';
-      sections.forEach(s => {
-        if (window.scrollY >= s.offsetTop - 120) current = s.getAttribute('id');
+      // Mobile menu
+      toggle.addEventListener('click', function () {
+        var open = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
       });
-      navLinks.forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      menu.addEventListener('click', function (e) {
+        if (e.target.closest('a')) {
+          menu.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
       });
-    });
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      // Active link via IntersectionObserver
+      if ('IntersectionObserver' in window) {
+        var spy = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              var id = '#' + e.target.id;
+              links.forEach(function (l) { l.classList.toggle('active', l.getAttribute('href') === id); });
+            }
+          });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        sections.forEach(function (s) { spy.observe(s); });
 
-    function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('open');
-    }
+        // Reveal on scroll
+        var reveal = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('in'); reveal.unobserve(e.target); }
+          });
+        }, { threshold: 0.14 });
+        document.querySelectorAll('.reveal').forEach(function (el) { reveal.observe(el); });
+      } else {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+      }
 
-    function handleSubmit(e) {
-      e.preventDefault();
-      const btn = e.target.querySelector('button');
-      btn.textContent = 'Mensaje enviado';
-      btn.style.background = '#27500A';
-      btn.disabled = true;
-    }
+      // Year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
   </script>
 </body>
 </html>
